@@ -40,49 +40,83 @@
   **Press Ctrl +D to save**
       
    7. Creates two empty files, that is 'universal' and 'greetings.txt'.    
+   8. Produces a file Universal greetings, that  is if the quotation marks are included  
 
-
-   8. ```
-      wget https://raw.githubusercontent.com/Fnyasimi/my-first-repo/main/directory1/test.fa
+# Question 8
+   ```
+  wget https://raw.githubusercontent.com/Fnyasimi/my-first-repo/main/directory1/test.fa
+  ```
     
      
-     
-  9.  ```
-      wc -l test.fa
-      ```
-      
-  10     ```
-        grep -h '>' test.fa >identifiers 
-        ```
-     
-  11.   ```
-         cat test.fa | tr [A] [a] >test.fa.translated
-        ```
- 12. 
+# Question 9
   
-  15.   ```
+  ```
+  wc -l test.fa
+  ```
+  
+# Question 10
+
+   ```
+   grep -h '>' test.fa >identifiers 
+   ```
+# Question 11
+     
+    ```
+    cat test.fa | tr [A] [a] >test.fa.translated
+        ```
+ 
+  
+ # Question 15 
+ 
+          ```
         for ((x=1;x<=30;x++1)) do echo $x; done 
         ```
         
-   
+# Question 16
+    ```
     touch trial{1..20} | find . -name 'trial*' exec mv {} {}.data
-      
-  *OR*
-  
-         
-         touch trial{1..20} | find . -type f -name 'trial*' -print0 | xargs --null -I{} mv {} {}.data
+     ```
+     
+*OR*
+  ```
+  touch trial{1..20} | find . -type f -name 'trial*' -print0 | xargs --null -I{} mv {} {}.data
+  ```
        
          
-  17. Gives an error, no number is divisible by '0'.
-  18. 
-  19. ```
-  20. ls >out 2>error
-  21. ```
+ # Question 17     
+    Gives an error, no number is divisible by '0'.
 
-20 
+# Question 18
+     ```
+     ls >out 2>error
+      ```
 
-```
-  cd ../../Fun_stuff/
- ```
+# Question 20 
+   ```
+     cd ../../Fun_stuff/
+     ```
+    
+    
+# Question
+          _This loop produces integers 1-30, 1 per line_
   
-20. 
+  ```
+   for ((x=1;x<=30;x++1)) do echo $x; done 
+   ```
+
+_sorting species-names file in order of multiplicity; uniq -c produces the number of occurence of each line; sort -kn, k-sorts using first field(numbers) n- sorts numerically_
+ ```
+cat species-names.txt  | sort | uniq -c | sort -k 1n
+```
+
+_Displaying test.fa file content starting with '>'_
+
+  ``` 
+  grep -h '>' test.fa
+   ```
+   
+_Line count of test.fa file_
+```
+cat test.fa | wc -l
+```
+_
