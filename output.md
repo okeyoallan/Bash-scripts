@@ -42,40 +42,40 @@
    7. Creates two empty files, that is 'universal' and 'greetings.txt'.    
    8. Produces a file Universal greetings, that  is if the quotation marks are included  
 
-# Question 8
+### Question 8
+
    ```
   wget https://raw.githubusercontent.com/Fnyasimi/my-first-repo/main/directory1/test.fa
   ```
     
      
-# Question 9
+### Question 9
   
   ```
   wc -l test.fa
   ```
   
-# Question 10
+### Question 10
 
    ```
    grep -h '>' test.fa >identifiers 
    ```
-# Question 11
-     
-    ```
-    cat test.fa | tr [A] [a] >test.fa.translated
-        ```
+   
+### Question 11
+```  
+cat test.fa | tr [A] [a] >test.fa.translated
+```
  
   
- # Question 15 
- 
-          ```
-        for ((x=1;x<=30;x++1)) do echo $x; done 
-        ```
+ ### Question 15 
+ ```
+ for ((x=1;x<=30;x++1)) do echo $x; done 
+ ```
         
-# Question 16
-    ```
-    touch trial{1..20} | find . -name 'trial*' exec mv {} {}.data
-     ```
+### Question 16
+``` 
+touch trial{1..20} | find . -name 'trial*' exec mv {} {}.data
+```
      
 *OR*
   ```
@@ -83,28 +83,27 @@
   ```
        
          
- # Question 17     
+ ### Question 17     
     Gives an error, no number is divisible by '0'.
 
-# Question 18
-     ```
-     ls >out 2>error
-      ```
+### Question 18
+```
+ls >out 2>error
+```
 
-# Question 20 
-   ```
-     cd ../../Fun_stuff/
-     ```
-    
-    
-# Question
-          _This loop produces integers 1-30, 1 per line_
-  
-  ```
-   for ((x=1;x<=30;x++1)) do echo $x; done 
-   ```
+### Question 20 
+```
+cd ../../Fun_stuff/
+```
+     
+### Question 
+_This loop produces integers 1-30, 1 per line_    
+```
+for ((x=1;x<=30;x++1)) do echo $x; done 
+```
 
 _sorting species-names file in order of multiplicity; uniq -c produces the number of occurence of each line; sort -kn, k-sorts using first field(numbers) n- sorts numerically_
+
  ```
 cat species-names.txt  | sort | uniq -c | sort -k 1n
 ```
